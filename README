@@ -1,0 +1,14 @@
+#  Demo program of usage of Ivy bus and Rejeu
+
+## Setup
+To use this demo, you need to use Rejeu.
+open terminal and go to Rejeu folder allow execution and launch the program with provided data.
+```
+$ cd Rejeu
+$ chmod +wrx rejeu
+$ ./rejeu traffic_small.txt -s auto
+```
+Now Rejeu is publishing messages on loopback IP.
+
+## communication
+communication.communicationManager implements capturing Rejeu messages, wrinting them out on System.out and text File.
