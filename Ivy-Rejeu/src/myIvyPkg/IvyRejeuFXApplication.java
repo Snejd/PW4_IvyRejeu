@@ -1,6 +1,7 @@
 package myIvyPkg;
 
 import fr.dgac.ivy.IvyException;
+import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -15,9 +16,17 @@ public class IvyRejeuFXApplication extends Application {
     // Interface de communication avec Rejeu
     private CommunicationManager communicationManager;
     private TextArea textArea;
+    private boolean logging = false;
     
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws InterruptedException {
+        // Retrieve command-line arguments
+        List<String> args = getParameters().getRaw();
+        if (!args.isEmpty() && args.get(0).equalsIgnoreCase("log")) {
+            textArea.appendText("Log mode enabled.\n");
+            logging = true;
+        }
+    
         // Create and set up a text area to display the messages sent by Rejeu
         textArea = new TextArea("Messages from Rejeu :\n");
         textArea.setPrefSize(800, 600);
@@ -36,8 +45,9 @@ public class IvyRejeuFXApplication extends Application {
         primaryStage.show();
         
         // Launch communication with Rejeu
+        
         try {
-            communicationManager = new CommunicationManager(textArea);
+            communicationManager = new CommunicationManager(textArea, logging);
         } catch (IvyException e) {
             // Display an explicit message in case of IvyException
             Alert alert = new Alert(Alert.AlertType.ERROR);

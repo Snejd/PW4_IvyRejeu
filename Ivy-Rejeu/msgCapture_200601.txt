@@ -1,0 +1,11 @@
+Name=traffic_small.txt
+StartTime=11:02:18
+EndTime=11:49:14
+*******************
+
+TrackMovedEvent Flight: 4996, CallSign: AAF312Q, Ssr: 4315, Sector: --, Layers: I, X: 36.50, Y: 13.53, Vx: 235, Vy: 447, Afl: 280, Rate: 0, Heading: 28, GroundSpeed: 505, Tendency: 0, Time: 11:02:18
+TrackMovedEvent Flight: 5042, CallSign: VLG2973, Ssr: 2362, Sector: --, Layers: I, X: 89.88, Y: -291.41, Vx: -6, Vy: -374, Afl: 200, Rate: 0, Heading: 181, GroundSpeed: 374, Tendency: 0, Time: 11:02:18
+TrackMovedEvent Flight: 4996, CallSign: AAF312Q, Ssr: 4315, Sector: --, Layers: I, X: 37.02, Y: 14.52, Vx: 238, Vy: 452, Afl: 280, Rate: 0, Heading: 28, GroundSpeed: 511, Tendency: 0, Time: 11:02:26
+TrackMovedEvent Flight: 5042, CallSign: VLG2973, Ssr: 2362, Sector: --, Layers: I, X: 89.86, Y: -292.23, Vx: 72, Vy: -367, Afl: 200, Rate: 0, Heading: 169, GroundSpeed: 374, Tendency: 0, Time: 11:02:26
+TrackMovedEvent Flight: 4996, CallSign: AAF312Q, Ssr: 4315, Sector: --, Layers: I, X: 37.55, Y: 15.53, Vx: 239, Vy: 454, Afl: 280, Rate: 0, Heading: 28, GroundSpeed: 513, Tendency: 0, Time: 11:02:34
+TrackMovedEvent Flight: 5042, CallSign: VLG2973, Ssr: 2362, Sector: --, Layers: I, X: 90.02, Y: -293.05, Vx: 215, Vy: -306, Afl: 200, Rate: 0, Heading: 145, GroundSpeed: 374, Tendency: 0, Time: 11:02:34
