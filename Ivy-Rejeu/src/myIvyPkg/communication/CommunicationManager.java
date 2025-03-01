@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 
 /**
@@ -136,6 +137,8 @@ public class CommunicationManager
                     + ", Time: " + strings[14]);
             
             if(textArea != null){
+                // Use Platform.runLater to update JavaFX UI components from a different thread using lamba expression
+                Platform.runLater(() -> {
                 textArea.appendText("Time " + strings[14]+":\n");
                 textArea.appendText("TrackMovedEvent Flight: " + strings[0]
                         + ", CallSign: " + strings[1] + ", Ssr: " + strings[2]
@@ -144,8 +147,9 @@ public class CommunicationManager
                         + strings[7] + ", Vy: " + strings[8] + ", Afl: " + strings[9]
                         + ", Rate: " + strings[10] + ", Heading: " + strings[11]
                         + ", GroundSpeed: " + strings[12] + ", Tendency: " + strings[13]+"\n");
+                });
             }
-            
+
             if(log == true){
                 try {            
                     try (FileWriter myWriter = new FileWriter(FileName, true)) {
